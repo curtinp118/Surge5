@@ -1,6 +1,12 @@
 # Surge5 Config 自用配置库 🚀
 
 一份经过精心优化、易于定制的 Surge 配置文件， 支持多机场✈️订阅
+## 📱 预览
+
+| 首页预览  | 首页预览  |
+| :---: | :---: |
+| <img src="./images/home1.jpeg" width="300" /> | <img src="./images/home2.jpeg" width="300" /> |
+
 
 ## ✨ 主要特性
 
