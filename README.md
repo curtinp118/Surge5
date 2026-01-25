@@ -55,7 +55,7 @@
 ```ini
 [General]
 external-controller-access = YOUR_PASSWORD@127.0.0.1:6170
-http-api = YOUR_PASSWORD@0.0.0.0:6171
+http-api = YOUR_PASSWORD@127.0.0.1:6171
 ```
 
 将 `YOUR_PASSWORD` 替换为你自己的强密码。

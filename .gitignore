@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editors / IDEs
+*.swp
+*.swo
+*~
+.idea/
+.fleet/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Logs
+*.log
+
+# Local/private Surge configs (avoid committing passwords/tokens/certs)
+*.local.conf
+*.private.conf
+surge5.local.conf
+surge5.private.conf
+surge5.conf.local
+
+# Certificates / keys (MitM CA export, etc.)
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.cer
+
+# GeoIP / downloaded databases
+*.mmdb
+
+# Env / secrets
+.env
+.env.*
+secrets/
