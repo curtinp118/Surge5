@@ -1,6 +1,6 @@
-# Surge5 Config 自用配置库 🚀
+# Surge5 Config 自用配置库
 
-一份经过精心优化、易于定制的 Surge 配置文件， 支持多机场✈️订阅
+一份面向日常使用的 Surge 配置仓库，提供稳定版成品配置和 Beta 模板，支持多机场订阅、应用分流、基础去广告与局域网受限共享的安全默认值。
 ## 📱 预览
 
 | 首页预览  | 首页预览  |
@@ -10,59 +10,78 @@
 
 ## ✨ 主要特性
 
-*   **⚡️ 极致分流**：
-    *   **多地区策略**：预设香港、美国、日本、台湾、韩国、新加坡等地区优选策略组 (`smart` 模式)。
-    *   **应用级优化**：针对 Netflix, YouTube, Spotify, Disney+, Telegram, Google, Apple 等常用服务独立分流。
-    *   **自动测速与故障转移**：核心策略组采用自动测速，确保始终连接最快节点。
+- `surge5.conf` 为稳定版，开箱即可用，`[General]` 已与 Beta 模板保持一致，适合日常长期使用。
+- `SurgePro_Beta.template.conf` 为占位符模板，适合从零开始自定义或对照参考。
+- 预设香港、美国、日本、台湾、韩国、新加坡等地区优选策略组，支持自动测速和故障转移。
+- 预设 `🔰 Sub-01` 至 `🔰 Sub-04` 四个订阅入口，并通过 `HUB` 聚合统一调用。
+- 针对 Google、Apple、Telegram、Netflix、YouTube、AI 等服务提供独立分流。
+- MITM 默认只处理 Google 重定向相关域名，兼顾功能与风险控制。
 
-*   **📦 多订阅聚合**：
-    *   预设 `🔰 Sub-01` 至 `🔰 Sub-04` 四个标准订阅。
-    *   通过 `HUB` 策略组自动聚合所有订阅节点，无需手动管理。
+## 如何使用
 
-*   **🛡 隐私与去广告**：
-    *   集成主流去广告规则集 (Adblock4limbo 等)。
-    *   内置隐私保护规则，屏蔽跟踪器与恶意网站。
-    *   DNS 防泄漏与 DoH (DNS over HTTPS) 支持。  
+### 配置文件说明
 
-- **安全策略适度**  
-  仅对 Google 域名启用 HTTPS 解密，避免不必要的风险和性能开销。  
-
-
-
-## 如何使用 🛠️
+| 文件 | 定位 | 适合场景 |
+| :--- | :--- | :--- |
+| `surge5.conf` | 稳定版主配置 | 日常直接使用 |
+| `SurgePro_Beta.template.conf` | Beta 占位符模板 | 从零定制、二次改造、对照参考 |
 
 ### 1. 下载配置
 
-1. 配置文件[长按复制](https://raw.githubusercontent.com/curtinp118/Surge5/refs/heads/main/surge5.conf)，打开Surge5，点击-导入-从URL下载配置。
+1. 下载稳定版配置：[surge5.conf](https://raw.githubusercontent.com/curtinp118/Surge5/refs/heads/main/surge5.conf)。
+2. 打开 Surge，选择“导入” -> “从 URL 下载配置”。
+3. 如果你准备自己从头改配置，也可以同时参考 [SurgePro_Beta.template.conf](https://raw.githubusercontent.com/curtinp118/Surge5/refs/heads/main/SurgePro_Beta.template.conf)。
 
 ### 2. 填入订阅信息
-使用文本编辑器打开配置文件，定位到 `[Proxy Group]` 区域：
+
+使用文本编辑器打开 `surge5.conf`，定位到 `[Proxy Group]` 区域：
 
 ```ini
 [Proxy Group]
 ...
 🔰 Sub-01 = select, policy-path=http://example.com/api/v1/client/subscribe?token=YOUR_TOKEN&flag, ...
 🔰 Sub-02 = select, policy-path=https://example.com/api/v1/client/subscribe?token=YOUR_TOKEN, ...
+🔰 Sub-03 = select, policy-path=https://example.com/api/v1/client/subscribe?token=YOUR_TOKEN, ...
+🔰 Sub-04 = select, policy-path=https://example.com/share/sub/backup?token=YOUR_TOKEN, ...
 ```
 
-*   将 `YOUR_TOKEN` 替换为你的机场订阅 Token。
-*   或者直接替换整段 `policy-path` 链接。
+- 将 `YOUR_TOKEN` 替换为你的机场订阅 Token。
+- 或者直接替换整条 `policy-path` 为机场提供的 Surge 订阅链接。
+- 不想用满四个订阅时，保留未使用项也可以，不影响其余策略组使用。
 
 
-### 3. 配置安全认证 (可选但推荐)
-定位到 `[General]` 区域，修改远程控制密码：
+### 3. 配置控制器密码
+
+定位到 `[General]` 区域，修改远程控制相关密码：
 
 ```ini
 [General]
-external-controller-access = YOUR_PASSWORD@127.0.0.1:6170
-http-api = YOUR_PASSWORD@127.0.0.1:6171
+external-controller-access = YOUR_CONTROLLER_PASSWORD@127.0.0.1:6170
+http-api = YOUR_HTTP_API_PASSWORD@127.0.0.1:6171
 ```
 
-将 `YOUR_PASSWORD` 替换为你自己的强密码。
+- 将 `YOUR_CONTROLLER_PASSWORD` 和 `YOUR_HTTP_API_PASSWORD` 替换为你自己的强密码。
+- 外部控制器与 Web 仪表盘仍默认绑定 `127.0.0.1`，不直接暴露到局域网。
 
+### 4. 局域网共享默认值
 
-### 4. 启用 MITM 功能
-为了实现 HTTPS 解密（用于去广告、URL 重写等高级功能），你需要配置 CA 证书。
+```ini
+allow-wifi-access = true
+allow-hotspot-access = true
+proxy-restricted-to-lan = true
+gateway-restricted-to-lan = true
+http-listen = 0.0.0.0
+socks5-listen = 0.0.0.0
+```
+
+- 代理端口默认可供局域网设备访问。
+- `proxy-restricted-to-lan = true` 与 `gateway-restricted-to-lan = true` 会把访问范围限制在当前局域网。
+- `external-controller-access` 与 `http-api` 仍保持本机回环地址，避免控制面板被局域网横向访问。
+- 建议保留强密码，并按需配合路由器或系统防火墙进一步限制来源。
+
+### 5. 启用 MITM 功能
+
+为了实现 HTTPS 解密（用于去广告、URL 重写等功能），你需要配置 CA 证书。
 
 **方法 A：生成新证书（推荐新手）**
 1.  导入配置到 Surge。
