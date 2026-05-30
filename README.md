@@ -27,9 +27,9 @@
 
 ### 1. 下载配置
 
-1. 下载稳定版配置：[surge5.conf](https://raw.githubusercontent.com/curtinp118/Surge5/refs/heads/main/surge5.conf)。
+1. 下载稳定版配置：[surge5.conf](https://raw.githubusercontent.com/curtinp118/Surge5/main/surge5.conf)。
 2. 打开 Surge，选择“导入” -> “从 URL 下载配置”。
-3. 如果你准备自己从头改配置，也可以同时参考 [SurgePro_Beta.template.conf](https://raw.githubusercontent.com/curtinp118/Surge5/refs/heads/main/SurgePro_Beta.template.conf)。
+3. 如果你准备自己从头改配置，也可以同时参考 [SurgePro_Beta.template.conf](https://raw.githubusercontent.com/curtinp118/Surge5/main/SurgePro_Beta.template.conf)。
 
 ### 2. 填入订阅信息
 
