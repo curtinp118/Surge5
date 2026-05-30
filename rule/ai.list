@@ -1,107 +1,147 @@
-# NAME: Ai Rules
-# AUTHOR: https://t.me/ddgksf2021
-# UPDATED: 2025-11-26
+# NAME: AI Rules
+# AUTHOR: Curtinp118
+# UPDATED: 2026-05-31
 
-# > Ai general rules
+# > Apple Intelligence
+DOMAIN-KEYWORD,apple-wit
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-livephotos.com
+DOMAIN,intelligence.apple.com
+DOMAIN,madservices.apple.com
+DOMAIN,guzzoni.apple.com
+DOMAIN,smoot.apple.com
+DOMAIN,api.apple-cloudkit.com
+DOMAIN,blackbird.apple.com
+
+# > General (AI infrastructure)
 DOMAIN,api.statsig.com
-DOMAIN,browser-intake-datadoghq.com
-DOMAIN,static.cloudflareinsights.com
-DOMAIN-SUFFIX,algolia.net
 DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,arkoselabs.com
 DOMAIN-SUFFIX,statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,launchdarkly.com
-DOMAIN-SUFFIX,segment.io
-DOMAIN-SUFFIX,amazonaws.com
-DOMAIN-SUFFIX,wp.com
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,cloudflareinsights.com
 
-# > Anthropic/Claude
-DOMAIN,cdn.usefathom.com
+# > OpenAI / ChatGPT
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,livekit.cloud
+
+# > Anthropic / Claude
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,claudeusercontent.com
 
-# > Cursor
-DOMAIN-SUFFIX,cursor.sh
-
-# > Dify AI
-DOMAIN-SUFFIX,dify.ai
-
-# > Google AI (Gemini/Bard)
+# > Google AI (Gemini / NotebookLM)
+DOMAIN-SUFFIX,ai.google
 DOMAIN,ai.google.dev
 DOMAIN,makersuite.google.com
+DOMAIN,aistudio.google.com
 DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-SUFFIX,clients6.google.com
-DOMAIN-SUFFIX,clients4.google.com
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,alkalimakersuite-pa.googleapis.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,colab.google.com
-DOMAIN-SUFFIX,colab.research.google.com
-DOMAIN-SUFFIX,developerprofiles.google.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-
-# > JetBrains AI
-DOMAIN-SUFFIX,grazie.ai
-
-# > Meta
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,meta.com
 
 # > Microsoft Copilot
-DOMAIN,api.msn.com
-DOMAIN,assets.msn.com
 DOMAIN,copilot.microsoft.com
-DOMAIN,gateway.bingviz.microsoft.net
-DOMAIN,gateway.bingviz.microsoftapp.net
-DOMAIN,in.appcenter.ms
-DOMAIN,location.microsoft.com
-DOMAIN,odc.officeapps.live.com
-DOMAIN,r.bing.com
-DOMAIN,self.events.data.microsoft.com
-DOMAIN,services.bingapis.com
-DOMAIN,sydney.bing.com
-DOMAIN,www.bing.com
-DOMAIN-SUFFIX,api.microsoftapp.net
-DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
 DOMAIN-SUFFIX,edgeservices.bing.com
-
-# > Midjourney
-DOMAIN-SUFFIX,midjourney.com
-
-# > OpenAI/ChatGPT
-DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-DOMAIN,openaicomproductionae4b.blob.core.windows.net
-DOMAIN,production-openaicom-storage.azureedge.net
-DOMAIN-SUFFIX,ai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,livekit.cloud
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,azureedge.net
-DOMAIN-SUFFIX,imgix.net
+DOMAIN-SUFFIX,bingapis.com
+DOMAIN,www.bing.com
+DOMAIN,r.bing.com
+DOMAIN,sydney.bing.com
+DOMAIN,services.bingapis.com
+DOMAIN,api.msn.com
 
 # > Perplexity
-DOMAIN,pplx-res.cloudinary.com
 DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,pplx.ai
 DOMAIN-SUFFIX,perplexity.com
+DOMAIN-SUFFIX,pplx.ai
 
 # > Poe
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,poecdn.net
 
-# > xAI/Grok
+# > xAI / Grok
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
+
+# > Character.ai
+DOMAIN-SUFFIX,character.ai
+DOMAIN-SUFFIX,c.ai
+
+# > Midjourney
+DOMAIN-SUFFIX,midjourney.com
+
+# > Image Generation
+DOMAIN-SUFFIX,stability.ai
+DOMAIN-SUFFIX,recraft.ai
+DOMAIN-SUFFIX,ideogram.ai
+DOMAIN-SUFFIX,playground.ai
+DOMAIN-SUFFIX,leonardo.ai
+
+# > Video Generation
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN-SUFFIX,lumalabs.ai
+DOMAIN-SUFFIX,pika.art
+DOMAIN-SUFFIX,klingai.com
+DOMAIN-SUFFIX,synthesia.io
+DOMAIN-SUFFIX,heygen.com
+DOMAIN-SUFFIX,d-id.com
+
+# > Voice / Music AI
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,murf.ai
+DOMAIN-SUFFIX,suno.com
+DOMAIN-SUFFIX,suno.ai
+DOMAIN-SUFFIX,udio.com
+
+# > GitHub Copilot
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,api.github.com
+DOMAIN,github.githubassets.com
+
+# > Code / Dev AI
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,windsurf.com
+DOMAIN-SUFFIX,replit.com
+DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,v0.dev
+DOMAIN-SUFFIX,bolt.new
+
+# > LLM Platform / API
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,replicate.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,cerebras.ai
+DOMAIN-SUFFIX,together.ai
+DOMAIN-SUFFIX,modal.com
+DOMAIN-SUFFIX,openrouter.ai
+
+# > Search AI
+DOMAIN-SUFFIX,you.com
+
+# > Content / Writing AI
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,copy.ai
+DOMAIN-SUFFIX,writesonic.com
+
+# > Design AI
+DOMAIN-SUFFIX,canva.com
+DOMAIN-SUFFIX,figma.com
+
+# > Other AI
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,meta.ai
