@@ -1,13 +1,12 @@
-     1|#!name=V2EX 每日签到
-     2|#!desc=V2EX 每日签到领取铜币
-     3|#!author=Curtinp118
-     4|#!homepage=https://github.com/curtinp118/Surge5
-     5|#!icon=https://raw.githubusercontent.com/v2ex/v2ex/master/favicon.ico
-     6|
-     7|[Script]
-     8|V2EX 抓包 = type=http-request, pattern=^https://www\.v2ex\.com/(mission|member).*$, requires-body=0, script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/v2ex/v2ex.js, timeout=10
-     9|V2EX 签到 = type=cron, cronexp="10 9 * * *", script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/v2ex/v2ex.js, timeout=60
-    10|
-    11|[MITM]
-    12|hostname = %APPEND% www.v2ex.com
-    13|
+#!name=V2EX 每日签到
+#!desc=V2EX 每日签到领取铜币
+#!author=Curtinp118
+#!homepage=https://github.com/curtinp118/Surge5
+#!icon=https://raw.githubusercontent.com/v2ex/v2ex/master/favicon.ico
+
+[Script]
+V2EX 抓包 = type=http-request, pattern=^https://www\.v2ex\.com/(mission|member).*$, requires-body=0, script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/refs/heads/main/scripts/v2ex/v2ex.js, timeout=10
+V2EX 签到 = type=cron, cronexp="10 9 * * *", script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/refs/heads/main/scripts/v2ex/v2ex.js, timeout=60
+
+[MITM]
+hostname = %APPEND% www.v2ex.com
