@@ -2,7 +2,7 @@
 #!desc=V2EX 每日签到领取铜币
 #!author=Curtinp118
 #!homepage=https://github.com/curtinp118/Surge5
-#!icon=https://raw.githubusercontent.com/v2ex/v2ex/master/favicon.ico
+#!icon=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/V2ex.png
 
 [Script]
 V2EX 抓包 = type=http-request, pattern=^https://www\.v2ex\.com/(mission|member).*$, requires-body=0, script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/v2ex/v2ex.js, timeout=10
