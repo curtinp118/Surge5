@@ -4,7 +4,7 @@
 #!homepage=https://github.com/curtinp118/Surge5
 
 [Script]
-http-response ^http:\/\/38\.76\.202\.248:8000\/.*profiles.* requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/dandanvip/dandanvip_unlock.js
+蛋蛋不语VIP解锁 = type=http-response, pattern=^http:\/\/38\.76\.202\.248:8000\/.*profiles.*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/dandanvip/dandanvip_unlock.js
 
 [MITM]
 hostname = %APPEND% 38.76.202.248
