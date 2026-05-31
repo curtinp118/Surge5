@@ -3,8 +3,8 @@
 #!author=Curtinp118
 #!homepage=https://github.com/curtinp118/Surge5
 
-[Script]
-蛋蛋不语VIP解锁 = type=http-response,pattern=^https?:\/\/38\.76\.202\.248:8000\/.*profiles.*,script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/dandanvip/dandanvip_unlock.js,timeout=10
+[rewrite_local]
+蛋蛋不语VIP解锁 = type=http-response,pattern=^http:\/\/38\.76\.202\.248:8000\/.*profiles.*$,requires-body=1,max-size=0,binary-body-mode=0,timeout=888,script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/dandanvip/dandanvip_unlock.js
 
-[MITM]
-hostname = 38.76.202.248
+[mitm]
+hostname = %APPEND% 38.76.202.248:8000
