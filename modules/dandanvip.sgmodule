@@ -1,0 +1,10 @@
+#!name=蛋蛋不语VIP解锁
+#!desc=解锁蛋蛋不语VIP会员功能
+#!author=Curtinp118
+#!homepage=https://github.com/curtinp118/Surge5
+
+[Script]
+蛋蛋不语VIP解锁 = type=http-response, pattern=^http:\/\/38\.76\.202\.248:8000\/.*profiles.*, requires-body=1, script-path=https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/dandanvip/dandanvip_unlock.js, timeout=10
+
+[MITM]
+hostname = %APPEND% 38.76.202.248
